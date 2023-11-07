@@ -1,0 +1,2 @@
+import '../styles/produit.scss'
+
