@@ -7,4 +7,5 @@ export default interface Produit {
     dateAjout: Date
     description: string
     marque : string
+    
   }
