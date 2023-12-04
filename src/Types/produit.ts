@@ -1,11 +1,10 @@
 export default interface Produit {
     id: string
-    name: string
-    price: Float32Array
-    discount : Int16Array
-    isDiscountTrue: boolean
-    dateAjout: Date
-    description: string
-    marque : string
-    
+    name : string
+    description : string
+    price: number
+    discountPercentage : number
+    imageUrl : string
+    quantity : number
+    brandId : string;
   }
