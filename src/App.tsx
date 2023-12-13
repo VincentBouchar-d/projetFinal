@@ -9,24 +9,20 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import AdminPanel from './pages/admin';
 import Acceuil from "./pages/acceuil";
 import produit from "./Types/produit"
+import Layout from "./pages/layout";
 
 function App() {
   
-  const [produits, setToDo] = useState<produit[]>([]);
-
   
-
-  const onSendToDo = async (text: string) => {
-    const newProduit = await POST<produit>('https://todoapirdl-87e5a72882d0.herokuapp.com/', { } as produit )
-    setToDo([...produits, newProduit])
-  }
 
   
   return (
       <BrowserRouter> 
         <Routes>
-          <Route path='/' element={<Acceuil />}></Route>
-          <Route path='/admin/produit' element={<AdminPanel/>}/>
+          <Route  element={<Layout/>}>
+            <Route path='/' element={<Acceuil />}></Route>
+            <Route path='/admin/produit' element={<AdminPanel/>}/>
+          </Route>
         </Routes>
       </BrowserRouter>
     )

@@ -1,0 +1,18 @@
+
+.footer {
+  background-image: url('https://kart-client-061a7049de9a.herokuapp.com/static/media/AProposBackground.66e53e6a3a6fce398c41.png');
+  background-size: cover;
+  background-position: center;
+  color: white;
+  text-align: center;
+  height: 10em;
+
+}
+.textFooter {
+  position: relative;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  font-size: 3em;
+}

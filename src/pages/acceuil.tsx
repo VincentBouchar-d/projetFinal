@@ -1,23 +1,18 @@
 import React from 'react';
-import Header from '../Components/header';
-import Footer from '../Components/footer';
-import {POST, DELETE, GET, PATCH} from '../server';
+import ImageAcceuil from '../Components/imageAcceuil';
 import ReactDOM from "react-dom/client";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import AdminPanel from './admin';
-
+import AffichageMarques from '../Components/affichageMarques';
 
 function  Acceuil() {
   
 
 
   return (
-    <div>
-
-      <Header></Header>
-
-      <Footer></Footer>
-    </div>
+      <>
+        <ImageAcceuil></ImageAcceuil>
+        <AffichageMarques></AffichageMarques>
+      </>
     )
 }
 

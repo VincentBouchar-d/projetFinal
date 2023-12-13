@@ -5,18 +5,18 @@ import brand from '../Types/brand'
 import {GET, PATCH, DELETE, POST} from '../server'
 export default function AdminPanelComponent() {
   const [produits, setProduits] = useState<produit[]>([]);
-  const brands = ['654d2d6194889e423ff6ea6c', '654d2de494889e423ff6ea6d', '6566239cbe807574e276dfac'];
+  //const brands = ['654d2d6194889e423ff6ea6c', '654d2de494889e423ff6ea6d', '6566239cbe807574e276dfac'];
     
- /* const [brands, setBrands] = useState<brand[]>([]);
+  const [brands, setBrand] = useState<brand[]>([]);
 
   useEffect(() => {
-    // Fetch messages here and then update the state with setMessages
-    const getBrand = async () => {
-      const fetchedBrands: brand[] = await GET<brand>("/brands")
-      setBrands(fetchedBrands)
+    // Fetch messages here and then update the state with setBrand
+    const getBrands = async () => {
+      const fetchedBrand = await GET<brand[]>('brands');
+      setBrand(fetchedBrand);
     }
-    getBrand();
-  }, []); */
+    getBrands();
+  }, []);
 
   
 
@@ -178,9 +178,9 @@ export default function AdminPanelComponent() {
             onChange={handleInputChange}
           >
             <option value="">Sélectionnez une marque</option>
-            {brands.map((brand, index) => (
-              <option key={index} value={brand}>
-                {brand}
+            {brands.map((brand) => (
+              <option key={brand.id} value={brand.id}>
+                {brand.name}
               </option>
             ))}
           </select>

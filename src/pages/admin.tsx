@@ -3,6 +3,7 @@ import {POST, DELETE, GET, PATCH} from '../server';
 import AdminPanelComponent from '../Components/adminPanel_component';
 import Header from '../Components/header'
 import Footer from '../Components/footer'
+import { Outlet } from 'react-router-dom';
 
 function AdminPanel() {
   
@@ -10,7 +11,7 @@ function AdminPanel() {
 
   return (
       <div>
-            <Header></Header>
+            
             <AdminPanelComponent></AdminPanelComponent>
       </div>
 
