@@ -1,0 +1,45 @@
+.detailsProduit
+{
+    display : flex;
+    align-items: center;
+    justify-content: center;
+}
+.imageClient
+{
+    width: 25%;
+    height: auto;
+}
+.produitClient
+{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+    background-color: cornflowerblue;
+}
+.descriptionClient
+{
+        font-size: 250%; // Increase the text size by 3 times
+}
+.prixTotal {
+    font-size: 1rem;
+    border: 1px solid black;
+    text-decoration: line-through;
+    border-radius: 25%;
+    width: 100%;
+    margin: 2%;
+}
+
+.prixRabais ,.prixTotalSansRabais
+{
+    color: red;
+}
+
+
+
+
+.pasDeRabais
+{
+    display : none;
+}

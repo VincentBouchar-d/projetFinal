@@ -8,11 +8,22 @@ import ReactDOM from "react-dom/client";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import AdminPanel from './pages/admin';
 import Acceuil from "./pages/acceuil";
-import produit from "./Types/produit"
+import Produit from "./Types/produit"
 import Layout from "./pages/layout";
+import DetailsProduit from "./pages/detailsProduit";
 
 function App() {
-  
+
+  const [produits, setProduit] = useState<Produit[]>([]);
+    useEffect(() => {
+        // Fetch messages here and then update the state with setBrand
+        const getProduits = async () => {
+            const fetchedProduits = await GET<Produit[]>('items');
+            setProduit(fetchedProduits);
+        }
+        getProduits();
+    }, []);
+    
   
 
   
@@ -22,6 +33,7 @@ function App() {
           <Route  element={<Layout/>}>
             <Route path='/' element={<Acceuil />}></Route>
             <Route path='/admin/produit' element={<AdminPanel/>}/>
+            <Route path='/product/:id' element={<DetailsProduit/>}/>
           </Route>
         </Routes>
       </BrowserRouter>

@@ -1,8 +1,8 @@
 import React from 'react';
 import ImageAcceuil from '../Components/imageAcceuil';
-import ReactDOM from "react-dom/client";
-import { BrowserRouter, Routes, Route } from "react-router-dom";
 import AffichageMarques from '../Components/affichageMarques';
+import ProduitsEnRabais from '../Components/produitsEnRabais';
+import ProduitsNouveaute from '../Components/produitsNouveautes';
 
 function  Acceuil() {
   
@@ -11,7 +11,9 @@ function  Acceuil() {
   return (
       <>
         <ImageAcceuil></ImageAcceuil>
-        <AffichageMarques></AffichageMarques>
+        <ProduitsEnRabais></ProduitsEnRabais>
+        <ProduitsNouveaute></ProduitsNouveaute>
+        <AffichageMarques></AffichageMarques> 
       </>
     )
 }

@@ -1,0 +1,51 @@
+.produits {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: 100%;
+    justify-content: space-around;
+}
+
+.produit
+{
+    background-color: bisque;
+    border: 1px solid black;
+    border-radius: 5%;
+    width:200px;
+}
+
+.image {
+    order: 1;
+    width: 100px;
+    height: auto;
+}
+
+.description {
+    order: 2;
+    display: flex;
+    flex-direction: column;
+}
+
+.nom {
+    font-size: 1.2rem;
+}
+
+.prixTotal {
+    font-size: 1rem;
+    border: 1px solid black;
+    text-decoration: line-through;
+    border-radius: 25%;
+    width: 33%;
+    margin: 2%;
+}
+
+.prixRabais
+{
+    color: red;
+}
+
+.prix
+{
+    display:flex;
+    flex-direction: row;
+}
