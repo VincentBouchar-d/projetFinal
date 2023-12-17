@@ -56,7 +56,28 @@ const DetailsProduit = () => {
         return classePrixTotal;
     }
 
-    
+    const AjouterPanier = () => {
+        const panierEnString = localStorage.getItem('panier');
+        if(panierEnString)
+        {
+            const panierParse = JSON.parse(panierEnString);
+            if(panierParse.find((produitPanier : Produit) => produitPanier.id === produit.id))
+            {
+                alert('Le produit est déjà dans le panier');
+                return;
+            }else
+            {
+                panierParse.push(produit);
+                localStorage.setItem('panier', JSON.stringify(panierParse));
+            }
+        }else
+        {
+            localStorage.setItem('panier', JSON.stringify([produit]));
+        }
+        alert('Le produit a été ajouté au panier')
+    }
+
+
  return(
     <div className='detailsProduit'>
         <div className='produitClient'>
@@ -68,7 +89,9 @@ const DetailsProduit = () => {
                 <p className={setClassePrixRabais(produit.discountPercentage)}>{(produit.price - produit.price * produit.discountPercentage).toFixed(2)} $</p>
             </div>
             <p className='descriptionClient'>{produit.description}</p>
+            <button  onClick={AjouterPanier} className='btnAjouterPanier'> Ajouter au panier</button>
         </div>
+        
     </div>
  );
 };

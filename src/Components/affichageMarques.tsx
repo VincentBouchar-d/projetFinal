@@ -23,7 +23,7 @@ export default function AffichageMarques() {
             <h1>Nos marques</h1>
             <div className='Brands'>
             {brands.map((brand) => (
-                <div className='brandLogoContainer'>
+                <div className='brandLogoContainer' key={brand.id}>
                     <img className='logo' src={brand.logoUrl} alt={brand.name} />
                 </div>
             ))}

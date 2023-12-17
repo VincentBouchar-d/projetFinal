@@ -11,6 +11,7 @@ import Acceuil from "./pages/acceuil";
 import Produit from "./Types/produit"
 import Layout from "./pages/layout";
 import DetailsProduit from "./pages/detailsProduit";
+import Kart from "./pages/kart";
 
 function App() {
 
@@ -32,6 +33,7 @@ function App() {
         <Routes>
           <Route  element={<Layout/>}>
             <Route path='/' element={<Acceuil />}></Route>
+            <Route path='/kart' element={<Kart/>}/>
             <Route path='/admin/produit' element={<AdminPanel/>}/>
             <Route path='/product/:id' element={<DetailsProduit/>}/>
           </Route>
