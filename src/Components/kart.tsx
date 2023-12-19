@@ -140,7 +140,6 @@ export default function Kart() {
             
         })
         
-
         const sendCommande = async () => {
             await POST('order', panierCommande);
 
