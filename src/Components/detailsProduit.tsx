@@ -67,11 +67,13 @@ const DetailsProduit = () => {
                 return;
             }else
             {
+                produit.quantiteKart = 1;
                 panierParse.push(produit);
                 localStorage.setItem('panier', JSON.stringify(panierParse));
             }
         }else
         {
+            produit.quantiteKart = 1;
             localStorage.setItem('panier', JSON.stringify([produit]));
         }
         alert('Le produit a été ajouté au panier')

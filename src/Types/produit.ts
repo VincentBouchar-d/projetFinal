@@ -7,4 +7,5 @@ export default interface Produit {
     imageUrl : string
     quantity : number
     brandId : string;
-  }
+    quantiteKart : number;
+  } 
