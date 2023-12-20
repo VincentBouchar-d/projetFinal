@@ -21,7 +21,8 @@ const DetailsProduit = () => {
 
     useEffect(() => {
         const getBrands = async () => {
-            const fetchedBrand = await GET<Brand[]>('brands');
+            // Comme ça, pas de find à faire sur la brand! On a deja la bonne!
+            const fetchedBrand = await GET<Brand[]>(`brand/${produit.brandid}`);
             setBrand(fetchedBrand);
         }
         getBrands();
@@ -71,7 +72,7 @@ const DetailsProduit = () => {
         alert('Le produit a été ajouté au panier')
     }
 
-
+    // Tu aurais pu réutiliser le même composant produit partout pour éviter de copier coller du code. Mais c'est ok.
     return (
         <div className='detailsProduit'>
             <div className='produitClient'>

@@ -52,7 +52,7 @@ export default function ProduitsNouveaute() {
         }
         return classePrixTotal;
     }
-
+    // C'est la même chose que ProduitsEnRabais. Tu aurais pu réutiliser le code en passant la liste de produits et le titre en props.
     return (
         <div className='produitsNouveaute'>
             <h1>Nouveautés en stock</h1>
