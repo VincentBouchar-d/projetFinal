@@ -2,10 +2,10 @@ import ShoppingKart from '../Components/kart';
 
 
 function Kart() {
+  
 
-
-
-    return (
+// Pas besoin de component au final tsé... Tu aurais pu tout mettre ici!
+  return (
         <>
             <ShoppingKart></ShoppingKart>
         </>
