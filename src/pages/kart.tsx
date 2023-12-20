@@ -2,10 +2,10 @@ import ShoppingKart from '../Components/kart';
 
 
 function Kart() {
-  
 
 
-  return (
+
+    return (
         <>
             <ShoppingKart></ShoppingKart>
         </>

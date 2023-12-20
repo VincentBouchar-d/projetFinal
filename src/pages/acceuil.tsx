@@ -4,18 +4,18 @@ import AffichageMarques from '../Components/affichageMarques';
 import ProduitsEnRabais from '../Components/produitsEnRabais';
 import ProduitsNouveaute from '../Components/produitsNouveautes';
 
-function  Acceuil() {
-  
+function Acceuil() {
+
 
 
   return (
-      <>
-        <ImageAcceuil></ImageAcceuil>
-        <ProduitsEnRabais></ProduitsEnRabais>
-        <ProduitsNouveaute></ProduitsNouveaute>
-        <AffichageMarques></AffichageMarques> 
-      </>
-    )
+    <>
+      <ImageAcceuil></ImageAcceuil>
+      <ProduitsEnRabais></ProduitsEnRabais>
+      <ProduitsNouveaute></ProduitsNouveaute>
+      <AffichageMarques></AffichageMarques>
+    </>
+  )
 }
 
 export default Acceuil;

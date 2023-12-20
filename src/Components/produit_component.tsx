@@ -1,8 +1,8 @@
 import '../styles/produit.scss'
 import Produit from '../Types/produit'
 
-export default function Produit_component({produit}: {produit: Produit}) {
-  
+export default function Produit_component({ produit }: { produit: Produit }) {
+
   return (
     <>
       <div className="produit">

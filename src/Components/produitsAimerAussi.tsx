@@ -1,5 +1,5 @@
 import '../Styles/produitsEnRabais.scss'
-import {GET} from '../server';
+import { GET } from '../server';
 import { useEffect, useState } from "react"
 import Produit from '../Types/produit';
 import Brand from '../Types/brand';
@@ -33,25 +33,21 @@ export default function ProduitsAimerAussi() {
         return brand ? brand.name : "";
     }
 
-    const setClassePrixRabais = (discountPercentage : number) => {
-        let classePrixRabais : string
-        if(discountPercentage > 0)
-        {
+    const setClassePrixRabais = (discountPercentage: number) => {
+        let classePrixRabais: string
+        if (discountPercentage > 0) {
             classePrixRabais = 'prixRabais'
-        }else
-        {
+        } else {
             classePrixRabais = 'pasDeRabais'
         }
         return classePrixRabais;
     }
-    
-    const setClassePrixTotal = (discountPercentage : number) => {
-        let classePrixTotal : string
-        if(discountPercentage > 0)
-        {
+
+    const setClassePrixTotal = (discountPercentage: number) => {
+        let classePrixTotal: string
+        if (discountPercentage > 0) {
             classePrixTotal = 'prixTotal'
-        }else
-        {
+        } else {
             classePrixTotal = 'prixTotalSansRabais'
         }
         return classePrixTotal;
@@ -62,21 +58,20 @@ export default function ProduitsAimerAussi() {
             <h1>Vous pourriez aimer...</h1>
             <div className='produits'>
                 {produits.map((produit) => (
-                <Link to={`/product/${produit.id}`} className='produit'> 
-                    <div className='produit'>
-                        <img className='image' src={produit.imageUrl} alt={produit.name} />
-                        <h2 className='nom'>{produit.name}</h2>
-                        <p className='brand'>{getBrandName(produit.brandId)}</p>
-                        <div className='prix'>
-                            <p className={setClassePrixTotal(produit.discountPercentage)}>{produit.price} $</p>
-                            <p className={setClassePrixRabais(produit.discountPercentage)}>{(produit.price - produit.price * produit.discountPercentage).toFixed(2)} $</p>
+                    <Link to={`/product/${produit.id}`} className='produit'>
+                        <div className='produit'>
+                            <img className='image' src={produit.imageUrl} alt={produit.name} />
+                            <h2 className='nom'>{produit.name}</h2>
+                            <p className='brand'>{getBrandName(produit.brandId)}</p>
+                            <div className='prix'>
+                                <p className={setClassePrixTotal(produit.discountPercentage)}>{produit.price} $</p>
+                                <p className={setClassePrixRabais(produit.discountPercentage)}>{(produit.price - produit.price * produit.discountPercentage).toFixed(2)} $</p>
+                            </div>
                         </div>
-                    </div>
-                </Link>
+                    </Link>
                 ))}
             </div>
         </div>
     );
 }
-        
-        
+

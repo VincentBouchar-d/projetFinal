@@ -34,7 +34,7 @@ export default function Header() {
               <p>Recherche</p>
             </li>
             <li>
-            <Link to="/kart">Panier</Link>
+              <Link to="/kart">Panier</Link>
             </li>
             <li>
               <p>Compte</p>

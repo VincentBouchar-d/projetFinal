@@ -1,20 +1,16 @@
-
-.Brands
-{
+.Brands {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
 }
 
-.brandLogoContainer
-{
+.brandLogoContainer {
     width: 100px;
     height: 100px;
     aspect-ratio: auto 100/100;
 }
 
-.logo
-{
+.logo {
     width: 100px;
     height: 100px;
     border-radius: 50%;

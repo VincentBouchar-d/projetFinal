@@ -1,5 +1,5 @@
 import '../Styles/produitsEnRabais.scss'
-import {GET} from '../server';
+import { GET } from '../server';
 import { useEffect, useState } from "react"
 import Produit from '../Types/produit';
 import Brand from '../Types/brand';
@@ -38,21 +38,20 @@ export default function ProduitsEnRabais() {
             <h1>Nos produits en rabais</h1>
             <div className='produits'>
                 {produits.map((produit) => (
-                <Link to={`/product/${produit.id}`} className='produit'> 
-                    <div className='produit'>
-                        <img className='image' src={produit.imageUrl} alt={produit.name} />
-                        <h2 className='nom'>{produit.name}</h2>
-                        <p className='brand'>{getBrandName(produit.brandId)}</p>
-                        <div className='prix'>
-                            <p className='prixTotal'>{produit.price} $</p>
-                            <p className='prixRabais'>{(produit.price - produit.price * produit.discountPercentage).toFixed(2)} $</p>
+                    <Link to={`/product/${produit.id}`} className='produit'>
+                        <div className='produit'>
+                            <img className='image' src={produit.imageUrl} alt={produit.name} />
+                            <h2 className='nom'>{produit.name}</h2>
+                            <p className='brand'>{getBrandName(produit.brandId)}</p>
+                            <div className='prix'>
+                                <p className='prixTotal'>{produit.price} $</p>
+                                <p className='prixRabais'>{(produit.price - produit.price * produit.discountPercentage).toFixed(2)} $</p>
+                            </div>
                         </div>
-                    </div>
-                </Link>
+                    </Link>
                 ))}
             </div>
         </div>
     );
 }
-        
-        
+

@@ -6,12 +6,11 @@
     justify-content: space-around;
 }
 
-.produit
-{
+.produit {
     background-color: bisque;
     border: 1px solid black;
     border-radius: 5%;
-    width:200px;
+    width: 200px;
 }
 
 .image {
@@ -39,19 +38,17 @@
     margin: 2%;
 }
 
-.prixRabais ,.prixTotalSansRabais
-{
+.prixRabais,
+.prixTotalSansRabais {
     color: red;
 }
 
-.prix
-{
-    display:flex;
+.prix {
+    display: flex;
     flex-direction: row;
 }
 
 
-.pasDeRabais
-{
-    display : none;
+.pasDeRabais {
+    display: none;
 }

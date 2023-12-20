@@ -1,16 +1,15 @@
-.detailsProduit
-{
-    display : flex;
+.detailsProduit {
+    display: flex;
     align-items: center;
     justify-content: center;
 }
-.imageClient
-{
+
+.imageClient {
     width: 25%;
     height: auto;
 }
-.produitClient
-{
+
+.produitClient {
     display: flex;
     flex-direction: column;
     justify-content: space-around;
@@ -18,10 +17,11 @@
     width: 100%;
     background-color: cornflowerblue;
 }
-.descriptionClient
-{
-        font-size: 250%; // Increase the text size by 3 times
+
+.descriptionClient {
+    font-size: 250%; // Increase the text size by 3 times
 }
+
 .prixTotal {
     font-size: 1rem;
     border: 1px solid black;
@@ -31,21 +31,19 @@
     margin: 2%;
 }
 
-.prixRabais ,.prixTotalSansRabais
-{
+.prixRabais,
+.prixTotalSansRabais {
     color: red;
 }
 
 
 
 
-.pasDeRabais
-{
-    display : none;
+.pasDeRabais {
+    display: none;
 }
 
-.btnAjouterPanier
-{
+.btnAjouterPanier {
     background-color: green;
     color: white;
     border-radius: 25%;
